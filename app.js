@@ -3,26 +3,27 @@
 const process = require("process");
 
 const { argv } = process;
+const sumar = require("./sumar")
 
-function calculadora(comando) {
+function calculadora(comando, a,b) {
     switch (comando) {
         case "sumar":
-    
+        return sumar(a,b)
             break;
         case "restar":
-    
+
             break;
         case "multiplicar":
-    
+
             break;
         case "dividir":
-    
+
             break;
-    
+
         default:
-        return "Comando no valido"
+            return "Comando no valido"
             break;
     }
 }
 
-console.log(calculadora(argv[2],argv[3],argv[4]));
+console.log(calculadora(argv[2], +argv[3], +argv[4]));
